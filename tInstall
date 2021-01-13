@@ -1,0 +1,15 @@
+#!/bin/bash
+
+sudo yum --assumeyes update
+
+sudo yum --assumeyes install wget unzip
+
+cd ~/
+
+sudo wget https://releases.hashicorp.com/terraform/0.12.18/terraform_0.12.18_linux_amd64.zip
+
+sudo unzip ./terraform_0.12.18_linux_amd64.zip -d /usr/local/bin
+
+echo "Terraform should now be intalled" 
+echo "validate with a terraform -v command"
+
